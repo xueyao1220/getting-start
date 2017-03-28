@@ -10,7 +10,7 @@ links = soup.find_all("a")
 for link in links:
     print(link.get("href"))
 
-g_data = soup.find_all("div",{"class":"info"})
+g_data = soup.find_all("p",{"class":"info"})
 
 for item in g_data:
     print(item.contents[0].find_all("a",{"class":"business-name"})[0].text)
